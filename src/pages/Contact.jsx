@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, MessageCircle, MapPin, Mail, Clock, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { brandInfo } from '../data/gymData';
+import EnquiryForm from '../components/EnquiryForm';
 import './Contact.css';
 
 export default function Contact() {
@@ -18,11 +19,11 @@ export default function Contact() {
         <div className="container">
           <span className="section-tag">
             <Sparkles size={14} />
-            Direct Communication
+            Contact & Enquiries
           </span>
           <h1>Connect With A to Z Fitness</h1>
           <p className="page-header-lead">
-            Reach out directly to our gym team without filling out forms. Choose between a direct telephone call or an instant WhatsApp chat for immediate assistance.
+            Get in touch with our team at A to Z Fitness. Send us an online enquiry below, or reach out directly via Phone Call or WhatsApp for immediate assistance in Hinjawadi, Pune.
           </p>
         </div>
       </section>
@@ -105,8 +106,11 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Responsive Online Gym Enquiry Form (Web3Forms Connected) */}
+          <EnquiryForm />
+
           {/* Secondary Details: Location & Hours */}
-          <div className="secondary-details-grid">
+          <div className="secondary-details-grid" style={{ marginTop: '3rem' }}>
             {/* Physical Location Card */}
             <div className="detail-panel card">
               <div className="panel-title-wrap">
@@ -192,13 +196,13 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Direct Contact Transparency Notice */}
+          {/* Response Commitment Notice */}
           <div className="direct-transparency-card card">
             <ShieldCheck size={22} className="transparency-icon" />
             <div>
-              <h4>Why Direct Contact Only?</h4>
+              <h4>Prompt Response Commitment</h4>
               <p>
-                To provide you with the fastest and most reliable response, <strong>{brandInfo.name}</strong> connects you straight to real staff via Call or WhatsApp. We avoid unmonitored contact forms, ensuring your questions are handled promptly.
+                At <strong>{brandInfo.name}</strong>, all online enquiries submitted through the form are routed directly to our official inbox (<code>{contactPlaceholders.email}</code>). For immediate assistance or urgent queries during floor hours, you can reach out via Direct Phone Call or instant WhatsApp chat above.
               </p>
             </div>
           </div>
