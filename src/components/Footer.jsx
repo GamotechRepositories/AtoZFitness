@@ -19,9 +19,7 @@ export default function Footer() {
               </div>
               <div className="brand-text-wrap">
                 <span className="brand-title">A <span className="brand-accent">TO</span> Z</span>
-                <span className="brand-subtitle" aria-label="FITNESS">
-                  <span>F</span><span>I</span><span>T</span><span>N</span><span>E</span><span>S</span><span>S</span>
-                </span>
+                <span className="brand-subtitle">FITNESS</span>
               </div>
             </Link>
             <p className="footer-brand-desc">
