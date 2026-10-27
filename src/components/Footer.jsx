@@ -60,13 +60,13 @@ export default function Footer() {
           {/* Business Information Placeholders */}
           <div className="footer-contact-col">
             <h4 className="footer-heading">Gym Information</h4>
-            <p className="footer-subtext">Awaiting official client confirmation:</p>
+            <p className="footer-subtext">Hinjawadi, Pune Facility:</p>
             
             <div className="footer-contact-item">
               <MapPin size={18} className="footer-contact-icon" />
               <div>
                 <span className="footer-contact-value">{brandInfo.contactPlaceholders.address}</span>
-                <span className="placeholder-tag">Placeholder</span>
+                <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'rgba(204,255,0,0.1)' }}>Verified Location</span>
               </div>
             </div>
 

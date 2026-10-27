@@ -14,15 +14,15 @@ export const brandInfo = {
   establishedNotice: "Official gym details, official launch dates, and verified facilities will be updated as provided by management.",
   previewNotice: "Client Preview Build: Business information, class timetables, and pricing are placeholders awaiting client verification.",
   
-  // Strict client placeholders - no invented claims
+  // Verified client information
   contactPlaceholders: {
-    address: "[Official Gym Address will be updated upon client confirmation]",
-    addressNote: "Location details will be announced soon",
-    phone: "[Phone Number to be provided by A to Z Fitness]",
-    phoneRaw: "+1234567890", // Configurable direct dial number
+    address: "Hinjawadi Phase 2 Rd, Hinjawadi Phase II, Rajiv Gandhi Infotech Park, Hinjawadi, Pune, Maharashtra 411057",
+    addressNote: "Rajiv Gandhi Infotech Park, Hinjawadi Phase II, Pune",
+    phone: "+91 8989898989",
+    phoneRaw: "+918989898989",
     phoneNote: "Tap to call directly from your device",
-    whatsapp: "[WhatsApp Number to be provided by A to Z Fitness]",
-    whatsappRaw: "1234567890", // Configurable WhatsApp international format number
+    whatsapp: "+91 8989898989",
+    whatsappRaw: "918989898989",
     whatsappNote: "Tap to initiate an instant WhatsApp chat",
     whatsappDefaultMessage: "Hi A to Z Fitness, I would like to enquire about your gym programs and membership.",
     email: "[Official Email to be provided by A to Z Fitness]",

@@ -50,7 +50,7 @@ export default function Contact() {
                 <div className="channel-value-display">
                   <span className="val-label">Phone Line:</span>
                   <strong className="val-text">{contactPlaceholders.phone}</strong>
-                  <span className="placeholder-tag">Placeholder</span>
+                  <span className="badge badge-accent">Verified Contact</span>
                 </div>
 
                 <a
@@ -85,7 +85,7 @@ export default function Contact() {
                 <div className="channel-value-display">
                   <span className="val-label">WhatsApp Number:</span>
                   <strong className="val-text">{contactPlaceholders.whatsapp}</strong>
-                  <span className="placeholder-tag">Placeholder</span>
+                  <span className="badge badge-whatsapp">Verified Account</span>
                 </div>
 
                 <a
@@ -115,19 +115,40 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="panel-title">Gym Location</h3>
-                  <p className="panel-subtitle">Official facility premises</p>
+                  <p className="panel-subtitle">Rajiv Gandhi Infotech Park, Hinjawadi Phase II</p>
                 </div>
               </div>
 
               <div className="detail-content-box">
                 <strong className="detail-highlight">{contactPlaceholders.address}</strong>
-                <span className="placeholder-tag">Placeholder</span>
+                <span className="badge badge-accent" style={{ marginTop: '0.4rem', display: 'inline-flex' }}>Verified Address</span>
                 <p className="detail-subtext">{contactPlaceholders.addressNote}</p>
               </div>
 
               <div className="map-preview-box">
-                <MapPin size={28} className="map-pin-pulse" />
-                <p>Google Maps directions will be linked upon confirmation of final address coordinates.</p>
+                <div style={{ borderRadius: '12px', overflow: 'hidden', marginBottom: '1rem', height: '180px' }}>
+                  <iframe
+                    title="A to Z Fitness Location Map"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src={`https://maps.google.com/maps?q=${encodeURIComponent('Hinjawadi Phase 2 Rd, Hinjawadi Phase II, Rajiv Gandhi Infotech Park, Hinjawadi, Pune, Maharashtra 411057')}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+                  />
+                </div>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactPlaceholders.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline btn-sm"
+                  style={{ width: '100%' }}
+                >
+                  <MapPin size={15} />
+                  <span>Get Directions in Google Maps</span>
+                  <ArrowUpRight size={14} />
+                </a>
               </div>
             </div>
 

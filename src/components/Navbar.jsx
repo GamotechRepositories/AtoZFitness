@@ -79,14 +79,8 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* CTA Button */}
+        {/* Mobile Hamburger Button */}
         <div className="nav-actions">
-          <Link to="/membership" className="btn btn-primary btn-sm nav-cta-btn">
-            <span>Join Now</span>
-            <ArrowRight size={15} />
-          </Link>
-
-          {/* Mobile Hamburger Button */}
           <button
             className="mobile-toggle-btn"
             onClick={() => setIsOpen(!isOpen)}
@@ -132,15 +126,7 @@ export default function Navbar() {
           </ul>
 
           <div className="mobile-drawer-footer">
-            <Link
-              to="/membership"
-              className="btn btn-primary btn-block"
-              onClick={() => setIsOpen(false)}
-            >
-              <span>Explore Membership</span>
-              <ArrowRight size={16} />
-            </Link>
-            <p className="mobile-drawer-note">Official Client Preview Build</p>
+            <p className="mobile-drawer-note">A to Z Fitness • Hinjawadi, Pune</p>
           </div>
         </div>
       </div>
