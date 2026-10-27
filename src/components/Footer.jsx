@@ -119,11 +119,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <p className="copyright-text">
-            © {currentYear} <strong>A to Z Fitness</strong>. All rights reserved. Professional Frontend Prototype.
+            © {currentYear} <strong>A to Z Fitness</strong>. All rights reserved. Hinjawadi, Pune.
           </p>
-          <div className="footer-bottom-links">
-            <span className="system-pill">No Backend Connected • Frontend Only</span>
-          </div>
         </div>
       </div>
     </footer>
