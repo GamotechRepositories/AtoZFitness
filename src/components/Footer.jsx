@@ -108,8 +108,8 @@ export default function Footer() {
             <div className="footer-contact-item">
               <Clock size={18} className="footer-contact-icon" />
               <div>
-                <span className="footer-contact-value" style={{ display: 'block' }}>{brandInfo.contactPlaceholders.hoursWeekday}</span>
-                <span className="footer-contact-value" style={{ display: 'block', color: 'var(--text-dim)', fontSize: '0.82rem' }}>{brandInfo.contactPlaceholders.hoursWeekend}</span>
+                <span className="footer-contact-value">{brandInfo.contactPlaceholders.hoursWeekday}</span>
+                <span className="footer-contact-value">{brandInfo.contactPlaceholders.hoursWeekend}</span>
                 <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'rgba(204,255,0,0.1)' }}>Verified Hours</span>
               </div>
             </div>
