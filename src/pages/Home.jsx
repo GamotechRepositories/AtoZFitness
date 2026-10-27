@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Dumbbell, MapPin, Sparkles, Activity } from 'lucide-react';
+import { ArrowRight, Dumbbell, MapPin, Sparkles, Activity, BookOpen } from 'lucide-react';
 import { brandInfo } from '../data/gymData';
+import { gymBlogs } from '../data/blogsData';
+import BlogCard from '../components/BlogCard';
+import BlogReaderModal from '../components/BlogReaderModal';
 import heroImg from '../assets/images/hero.jpg';
 import './Home.css';
 
 export default function Home() {
+  const [selectedBlog, setSelectedBlog] = useState(null);
+
   return (
     <div className="home-page">
       {/* Front Look / Hero Section */}
@@ -76,6 +81,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Middle Section: 3 Horizontal Gym Blogs */}
+      <section className="section-padding home-blogs-section" aria-label="Gym Insights & Blogs">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">
+              <Sparkles size={14} />
+              Training & Wellness Insights
+            </span>
+            <h2>Fitness & Workout Knowledge</h2>
+            <p className="section-subtitle">
+              Evidence-based workout methodologies, nutritional recovery, and conditioning guides to maximize your physical potential.
+            </p>
+          </div>
+
+          <div className="grid-3 home-blogs-grid">
+            {gymBlogs.map((blog) => (
+              <BlogCard
+                key={blog.id}
+                blog={blog}
+                onSelect={(b) => setSelectedBlog(b)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Reader Modal */}
+      {selectedBlog && (
+        <BlogReaderModal
+          blog={selectedBlog}
+          onClose={() => setSelectedBlog(null)}
+        />
+      )}
     </div>
   );
 }

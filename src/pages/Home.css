@@ -169,3 +169,32 @@
     align-items: stretch;
   }
 }
+
+/* Middle Section: 3 Horizontal Gym Blogs */
+.home-blogs-section {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.home-blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .home-blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-blogs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
