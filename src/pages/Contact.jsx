@@ -160,22 +160,28 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="panel-title">Operating Schedule</h3>
-                  <p className="panel-subtitle">Planned opening hours</p>
+                  <p className="panel-subtitle">Official gym training hours</p>
                 </div>
               </div>
 
               <div className="detail-content-box">
-                <strong className="detail-highlight">{contactPlaceholders.hoursWeekday}</strong>
-                <span className="placeholder-tag">Placeholder</span>
-                <p className="detail-subtext">{contactPlaceholders.hoursWeekend}</p>
+                <div style={{ marginBottom: '0.65rem' }}>
+                  <strong className="detail-highlight">{contactPlaceholders.hoursWeekday}</strong>
+                </div>
+                <div>
+                  <strong className="detail-highlight">{contactPlaceholders.hoursWeekend}</strong>
+                </div>
+                <span className="badge badge-accent" style={{ marginTop: '0.65rem', display: 'inline-flex' }}>Verified Schedule</span>
               </div>
 
               <div className="email-fallback-box">
                 <div className="email-info-wrap">
                   <Mail size={18} className="email-icon" />
                   <div>
-                    <span className="email-label">Prefer Email?</span>
-                    <strong className="email-address">{contactPlaceholders.email}</strong>
+                    <span className="email-label">Official Gym Email</span>
+                    <a href={mailtoLink} className="email-address" style={{ color: 'var(--text-white)' }}>
+                      {contactPlaceholders.email}
+                    </a>
                   </div>
                 </div>
                 <a href={mailtoLink} className="btn btn-outline btn-sm">
