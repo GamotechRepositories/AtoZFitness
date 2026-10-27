@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dumbbell, MapPin, Phone, MessageCircle, Mail, Clock, ShieldAlert, ArrowUpRight } from 'lucide-react';
+import { Dumbbell, MapPin, Phone, MessageCircle, Mail, Clock, ShieldCheck, ArrowUpRight } from 'lucide-react';
 import { brandInfo } from '../data/gymData';
 import './Footer.css';
 
@@ -23,11 +23,11 @@ export default function Footer() {
               </div>
             </Link>
             <p className="footer-brand-desc">
-              Dedicated to balanced athletic progression, functional strength, and modern fitness training. Built with purpose for every fitness milestone.
+              <strong style={{ color: 'var(--text-white)' }}>A to Z Fitness</strong> is a complete athletic gym engineered for progressive strength, functional conditioning, and cardiovascular health. Equipped with professional-grade resistance machines, Olympic free weights, cardio decks, and dedicated turf training zones, <strong style={{ color: 'var(--text-white)' }}>A to Z Fitness</strong> provides a clean, disciplined, and motivating atmosphere for athletes and everyday fitness enthusiasts.
             </p>
-            <div className="footer-disclaimer-pill">
-              <ShieldAlert size={15} />
-              <span>Client Preview: Information subject to final verification</span>
+            <div className="footer-feature-pill">
+              <ShieldCheck size={15} />
+              <span>Modern Equipment • Clean & Sanitized • All Fitness Levels</span>
             </div>
           </div>
 

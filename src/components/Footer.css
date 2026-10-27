@@ -23,16 +23,18 @@
   line-height: 1.65;
 }
 
-.footer-disclaimer-pill {
+.footer-feature-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 193, 7, 0.08);
-  border: 1px dashed rgba(255, 193, 7, 0.35);
-  color: #ffc107;
-  padding: 0.4rem 0.75rem;
-  font-size: 0.75rem;
+  background: rgba(204, 255, 0, 0.08);
+  border: 1px solid rgba(204, 255, 0, 0.28);
+  color: var(--accent-primary);
+  padding: 0.45rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
 }
 
 .footer-heading {
