@@ -15,7 +15,7 @@ export default function ProgramCard({ program }) {
         <div className="program-overlay-grad" />
         <div className="program-top-badges">
           <span className="badge badge-accent">{category}</span>
-          <span className="badge badge-placeholder">Proposed Service</span>
+          <span className="badge badge-placeholder">A to Z Fitness</span>
         </div>
       </div>
 

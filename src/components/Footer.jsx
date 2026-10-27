@@ -47,13 +47,14 @@ export default function Footer() {
 
           {/* Proposed Programs */}
           <div className="footer-links-col">
-            <h4 className="footer-heading">Proposed Programs</h4>
+            <h4 className="footer-heading">Workout Programs</h4>
             <ul className="footer-link-list">
               <li><Link to="/programs">Strength Training</Link></li>
-              <li><Link to="/programs">Cardio Conditioning</Link></li>
-              <li><Link to="/programs">Weight Training</Link></li>
-              <li><Link to="/programs">Functional Fitness</Link></li>
+              <li><Link to="/programs">Muscle Building</Link></li>
+              <li><Link to="/programs">Weight Loss & Fat Management</Link></li>
+              <li><Link to="/programs">Cardio & Endurance</Link></li>
               <li><Link to="/programs">Personal Training</Link></li>
+              <li><Link to="/programs">Core & Abs Training</Link></li>
             </ul>
           </div>
 

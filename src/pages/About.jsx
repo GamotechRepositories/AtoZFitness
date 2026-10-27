@@ -130,7 +130,7 @@ export default function About() {
           </div>
 
           <div className="grid-2">
-            {proposedPrograms.slice(0, 4).map((prog) => (
+            {proposedPrograms.map((prog) => (
               <div key={prog.id} className="service-item-row card">
                 <div className="service-bullet">
                   <CheckCircle size={18} color="var(--accent-primary)" />

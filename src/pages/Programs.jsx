@@ -7,7 +7,15 @@ import './Programs.css';
 export default function Programs() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Strength', 'Cardio', 'Functional', 'Personal Training'];
+  const categories = [
+    'All',
+    'Strength Training',
+    'Muscle Building',
+    'Weight Loss',
+    'Cardio & Endurance',
+    'Personal Training',
+    'Core & Abs'
+  ];
 
   const filteredPrograms = selectedCategory === 'All'
     ? proposedPrograms
@@ -22,9 +30,9 @@ export default function Programs() {
             <Dumbbell size={14} />
             Workout Disciplines
           </span>
-          <h1>Proposed Workout Programs</h1>
+          <h1>Workout Programs</h1>
           <p className="page-header-lead">
-            Explore our proposed fitness categories designed to cover strength, endurance, athleticism, and personalized coaching.
+            Explore our 6 structured training disciplines covering foundational strength, muscle development, weight management, cardiovascular endurance, customized personal training, and core stability.
           </p>
         </div>
       </section>
@@ -36,9 +44,9 @@ export default function Programs() {
           <div className="programs-client-notice">
             <AlertCircle size={20} className="notice-icon" />
             <div>
-              <strong>Proposed Fitness Disciplines</strong>
+              <strong>A to Z Fitness Workout Programs</strong>
               <p>
-                These represent recommended core categories for A to Z Fitness. Specific class schedules, instructor names, session timings, and program rosters will be finalized upon management confirmation.
+                Each program is structured with progressive overload, target intensity levels, specialized equipment focus, and technique guidance tailored to your fitness journey.
               </p>
             </div>
           </div>

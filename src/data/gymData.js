@@ -4,6 +4,14 @@ import functionalImg from '../assets/images/functional.jpg';
 import weightsImg from '../assets/images/weights.jpg';
 import coachingImg from '../assets/images/coaching.jpg';
 
+// Program Specific AI Generated & High-Resolution Images
+import progStrengthImg from '../assets/images/prog_strength.jpg';
+import progMuscleImg from '../assets/images/prog_muscle.jpg';
+import progWeightlossImg from '../assets/images/prog_weightloss.jpg';
+import progCardioImg from '../assets/images/prog_cardio.jpg';
+import progPersonalImg from '../assets/images/prog_personal.jpg';
+import progCoreImg from '../assets/images/prog_core.jpg';
+
 export const brandInfo = {
   name: "A to Z Fitness",
   tagline: "Your Complete Athletic Journey from Start to Finish",
@@ -41,62 +49,98 @@ export const proposedPrograms = [
   {
     id: "strength-training",
     name: "Strength Training",
-    category: "Strength",
+    category: "Strength Training",
     tagline: "Build foundational power and progressive resistance.",
-    description: "A structured workout discipline focused on compound barbell lifts, progressive overload, and functional muscle development under safe movement standards.",
-    focusAreas: ["Compound Movements", "Muscular Endurance", "Proper Lifting Form"],
-    image: heroImg,
-    isProposed: true,
+    description: "A structured workout program focused on building strength through resistance exercises, controlled lifting, and progressive overload. It helps improve overall physical strength, muscular endurance, and movement technique.",
     intensity: "Intermediate to High",
-    equipmentFocus: "Power Racks, Olympic Barbells, Plate Loading"
+    equipmentFocus: "Barbells, dumbbells, power racks, weight plates",
+    focusAreas: [
+      "Compound Movements",
+      "Muscular Strength",
+      "Proper Lifting Form"
+    ],
+    image: progStrengthImg,
+    isProposed: true
   },
   {
-    id: "cardio-conditioning",
-    name: "Cardio Conditioning",
-    category: "Cardio",
-    tagline: "Elevate stamina, cardiovascular capacity, and agility.",
-    description: "Heart-rate elevating sessions utilizing treadmills, rowing ergs, assault bikes, and interval training designed to optimize aerobic capacity and endurance.",
-    focusAreas: ["Aerobic Capacity", "Interval Training", "Metabolic Stamina"],
-    image: cardioImg,
-    isProposed: true,
-    intensity: "All Fitness Levels",
-    equipmentFocus: "Treadmills, Concept2 Rowers, Stationary Bikes"
+    id: "muscle-building",
+    name: "Muscle Building",
+    category: "Muscle Building",
+    tagline: "Develop muscle size, definition, and balanced physique.",
+    description: "A resistance-training program designed to support muscle growth through targeted exercises and appropriate training volume. It combines controlled repetitions, progressive overload, and consistent training to develop different muscle groups.",
+    intensity: "Beginner to High, depending on experience",
+    equipmentFocus: "Dumbbells, barbells, cable machines, weight machines",
+    focusAreas: [
+      "Muscle Hypertrophy",
+      "Targeted Muscle Groups",
+      "Progressive Overload"
+    ],
+    image: progMuscleImg,
+    isProposed: true
   },
   {
-    id: "weight-training",
-    name: "Weight Training",
-    category: "Strength",
-    tagline: "Targeted resistance exercises with free weights and cables.",
-    description: "Comprehensive resistance routines emphasizing dumbbell isolation, cable hypertrophy, and guided machine work for balanced physique development.",
-    focusAreas: ["Hypertrophy", "Posture Correction", "Free Weight Mastery"],
-    image: weightsImg,
-    isProposed: true,
-    intensity: "All Fitness Levels",
-    equipmentFocus: "Dumbbells (1-50kg+), Cable Towers, Ergonomic Benches"
+    id: "weight-loss-fat-management",
+    name: "Weight Loss & Fat Management",
+    category: "Weight Loss",
+    tagline: "Support fat loss through movement and consistent training.",
+    description: "A workout program combining cardiovascular activity and resistance exercises to increase energy expenditure while maintaining muscle strength. Training can be adjusted to suit different fitness levels and individual goals.",
+    intensity: "Low to High, depending on fitness level",
+    equipmentFocus: "Treadmills, exercise bikes, dumbbells, resistance machines",
+    focusAreas: [
+      "Calorie Expenditure",
+      "Cardiovascular Fitness",
+      "Full-Body Training"
+    ],
+    image: progWeightlossImg,
+    isProposed: true
   },
   {
-    id: "functional-fitness",
-    name: "Functional Fitness",
-    category: "Functional",
-    tagline: "Core stability, bodyweight conditioning, and mobility.",
-    description: "Dynamic full-body conditioning incorporating kettlebells, medicine balls, resistance bands, and bodyweight drills to build functional strength for daily physical performance.",
-    focusAreas: ["Core Stability", "Mobility & Balance", "Functional Strength"],
-    image: functionalImg,
-    isProposed: true,
-    intensity: "All Fitness Levels",
-    equipmentFocus: "Kettlebells, Medicine Balls, Resistance Bands, Mats"
+    id: "cardio-endurance",
+    name: "Cardio & Endurance",
+    category: "Cardio & Endurance",
+    tagline: "Improve stamina, heart health, and workout capacity.",
+    description: "This program focuses on sustained physical activity to improve cardiovascular fitness and endurance. Workouts can include steady-paced exercise or intervals, with duration and intensity adjusted to each member's ability.",
+    intensity: "Low to High",
+    equipmentFocus: "Treadmills, stationary bikes, cross-trainers, rowing machines",
+    focusAreas: [
+      "Stamina",
+      "Heart and Lung Fitness",
+      "Workout Endurance"
+    ],
+    image: progCardioImg,
+    isProposed: true
   },
   {
     id: "personal-training",
     name: "Personal Training",
     category: "Personal Training",
-    tagline: "Customized one-on-one coaching and progressive guidance.",
-    description: "Direct guidance tailored to individual fitness objectives, focusing on technique calibration, progressive goal setting, and safe exercise execution.",
-    focusAreas: ["Technique Coaching", "Custom Routines", "Individual Progression"],
-    image: coachingImg,
-    isProposed: true,
-    intensity: "Tailored to Individual",
-    equipmentFocus: "Full Gym Access & Private Coaching Zone"
+    tagline: "Follow a workout plan tailored to your individual goals.",
+    description: "An individualized training approach in which workouts are adapted to a member's experience, preferences, and fitness objectives. Sessions may focus on strength, muscle development, general fitness, or improving exercise technique.",
+    intensity: "Customized to the individual",
+    equipmentFocus: "Depends on the member's workout plan and available gym equipment",
+    focusAreas: [
+      "Individualized Programming",
+      "Exercise Technique",
+      "Goal-Based Progress"
+    ],
+    image: progPersonalImg,
+    isProposed: true
+  },
+  {
+    id: "core-abs-training",
+    name: "Core & Abs Training",
+    category: "Core & Abs",
+    tagline: "Strengthen the core for stability and controlled movement.",
+    description: "A focused workout program targeting the abdominal and supporting trunk muscles. Exercises develop core strength, stability, and control, supporting good technique during many other gym movements.",
+    intensity: "Beginner to High",
+    equipmentFocus: "Exercise mats, cable machines, medicine balls, stability balls",
+    focusAreas: [
+      "Core Stability",
+      "Abdominal Strength",
+      "Postural Control"
+    ],
+    image: progCoreImg,
+    isProposed: true
   }
 ];
 
