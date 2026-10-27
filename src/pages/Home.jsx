@@ -214,7 +214,7 @@ export default function Home() {
                   <ArrowRight size={16} />
                 </Link>
                 <Link to="/contact" className="btn btn-outline">
-                  <span>Send Membership Enquiry</span>
+                  <span>Call or WhatsApp Us</span>
                 </Link>
               </div>
             </div>
@@ -260,16 +260,29 @@ export default function Home() {
         <div className="container">
           <div className="contact-banner card">
             <div className="contact-banner-text">
-              <span className="section-tag">Connect With Us</span>
+              <span className="section-tag">Direct Communication</span>
               <h2>Have Questions For A to Z Fitness?</h2>
               <p>
-                Our contact channels are being prepared. Get in touch with our team for general enquiries, program suggestions, or early launch notifications.
+                Connect directly with our team via Call or WhatsApp for immediate answers on schedules, memberships, and facility tours.
               </p>
             </div>
-            <div className="contact-banner-btn-wrap">
-              <Link to="/contact" className="btn btn-primary btn-lg">
-                <span>Go to Contact Page</span>
-                <ArrowRight size={18} />
+            <div className="contact-banner-btn-wrap" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a
+                href={`https://wa.me/${brandInfo.contactPlaceholders.whatsappRaw}?text=${encodeURIComponent(brandInfo.contactPlaceholders.whatsappDefaultMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp btn-lg"
+              >
+                <span>Chat on WhatsApp</span>
+              </a>
+              <a
+                href={`tel:${brandInfo.contactPlaceholders.phoneRaw}`}
+                className="btn btn-primary btn-lg"
+              >
+                <span>Call Direct</span>
+              </a>
+              <Link to="/contact" className="btn btn-outline btn-lg">
+                <span>All Contact Details</span>
               </Link>
             </div>
           </div>

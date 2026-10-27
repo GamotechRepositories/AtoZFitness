@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Flame, Layers, Dumbbell } from 'lucide-react';
+import { ArrowRight, Flame, Dumbbell, MessageCircle, Phone } from 'lucide-react';
+import { brandInfo } from '../data/gymData';
 import './ProgramCard.css';
 
 export default function ProgramCard({ program }) {
   const { name, category, tagline, description, focusAreas, image, intensity, equipmentFocus } = program;
+  const whatsappUrl = `https://wa.me/${brandInfo.contactPlaceholders.whatsappRaw}?text=${encodeURIComponent(`Hi A to Z Fitness, I would like to enquire about your ${name} program.`)}`;
 
   return (
     <article className="program-card card card-hover-glow">
@@ -45,12 +47,22 @@ export default function ProgramCard({ program }) {
         </div>
 
         <div className="program-actions">
-          <Link
-            to={`/contact?program=${encodeURIComponent(name)}`}
-            className="btn btn-outline btn-sm program-cta-btn"
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-whatsapp btn-sm program-cta-btn"
           >
-            <span>Enquire About Program</span>
-            <ArrowRight size={14} />
+            <MessageCircle size={15} />
+            <span>Chat on WhatsApp</span>
+          </a>
+          <Link
+            to="/contact"
+            className="btn btn-outline btn-sm program-call-btn"
+            title="View Direct Call & Location Details"
+          >
+            <Phone size={14} />
+            <span>Call Direct</span>
           </Link>
         </div>
       </div>

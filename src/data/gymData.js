@@ -19,7 +19,12 @@ export const brandInfo = {
     address: "[Official Gym Address will be updated upon client confirmation]",
     addressNote: "Location details will be announced soon",
     phone: "[Phone Number to be provided by A to Z Fitness]",
-    phoneNote: "Direct gym telephone line coming soon",
+    phoneRaw: "+1234567890", // Configurable direct dial number
+    phoneNote: "Tap to call directly from your device",
+    whatsapp: "[WhatsApp Number to be provided by A to Z Fitness]",
+    whatsappRaw: "1234567890", // Configurable WhatsApp international format number
+    whatsappNote: "Tap to initiate an instant WhatsApp chat",
+    whatsappDefaultMessage: "Hi A to Z Fitness, I would like to enquire about your gym programs and membership.",
     email: "[Official Email to be provided by A to Z Fitness]",
     emailNote: "Dedicated enquiries inbox",
     hoursWeekday: "[Opening Hours: To be confirmed by management]",

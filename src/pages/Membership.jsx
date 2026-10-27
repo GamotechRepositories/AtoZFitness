@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, ShieldCheck, Mail, ArrowRight, CheckCircle2, AlertCircle, FileText } from 'lucide-react';
+import { Clock, ShieldCheck, Phone, MessageCircle, ArrowRight, CheckCircle2, AlertCircle, FileText } from 'lucide-react';
 import { membershipPlaceholderNotice, brandInfo } from '../data/gymData';
 import './Membership.css';
 
@@ -72,12 +72,24 @@ export default function Membership() {
               </div>
             </div>
 
-            {/* Direct Enquiry CTA */}
+            {/* Direct Call & WhatsApp CTA */}
             <div className="membership-cta-wrap">
-              <Link to="/contact?subject=Membership%20Enquiry" className="btn btn-primary btn-lg">
-                <Mail size={18} />
-                <span>Submit Membership Enquiry</span>
-              </Link>
+              <a
+                href={`https://wa.me/${brandInfo.contactPlaceholders.whatsappRaw}?text=${encodeURIComponent('Hi A to Z Fitness, I would like to enquire about upcoming membership packages.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp btn-lg"
+              >
+                <MessageCircle size={18} />
+                <span>Chat on WhatsApp</span>
+              </a>
+              <a
+                href={`tel:${brandInfo.contactPlaceholders.phoneRaw}`}
+                className="btn btn-primary btn-lg"
+              >
+                <Phone size={18} />
+                <span>Call Direct</span>
+              </a>
               <Link to="/programs" className="btn btn-outline btn-lg">
                 <span>View Proposed Programs</span>
                 <ArrowRight size={16} />

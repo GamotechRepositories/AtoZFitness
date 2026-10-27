@@ -1,66 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, Send, AlertCircle, Info, CheckCircle2, ShieldAlert } from 'lucide-react';
+import React from 'react';
+import { Phone, MessageCircle, MapPin, Mail, Clock, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { brandInfo } from '../data/gymData';
 import './Contact.css';
 
 export default function Contact() {
-  const [searchParams] = useSearchParams();
-  const programParam = searchParams.get('program');
-  const subjectParam = searchParams.get('subject');
+  const { contactPlaceholders } = brandInfo;
 
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    interest: programParam ? `Program: ${programParam}` : (subjectParam || 'General Information'),
-    message: ''
-  });
-
-  const [previewNotice, setPreviewNotice] = useState(null);
-  const [validationError, setValidationError] = useState('');
-
-  useEffect(() => {
-    if (programParam) {
-      setFormData(prev => ({ ...prev, interest: `Program: ${programParam}` }));
-    } else if (subjectParam) {
-      setFormData(prev => ({ ...prev, interest: subjectParam }));
-    }
-  }, [programParam, subjectParam]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setValidationError('');
-
-    if (!formData.fullName.trim() || !formData.email.trim() || !formData.message.trim()) {
-      setValidationError('Please fill in your name, email, and message to preview submission.');
-      return;
-    }
-
-    // Explicitly truthful message: Do not pretend email was sent!
-    setPreviewNotice({
-      title: "Frontend Preview Recorded",
-      message: "Notice: Because this is a frontend-only prototype without an active server or email provider, this message was not sent to A to Z Fitness. This interface demonstrates form validation and field layout for the client.",
-      submittedData: { ...formData }
-    });
-  };
-
-  const handleReset = () => {
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      interest: 'General Information',
-      message: ''
-    });
-    setPreviewNotice(null);
-    setValidationError('');
-  };
+  // Direct phone and WhatsApp links
+  const telLink = `tel:${contactPlaceholders.phoneRaw}`;
+  const whatsappUrl = `https://wa.me/${contactPlaceholders.whatsappRaw}?text=${encodeURIComponent(contactPlaceholders.whatsappDefaultMessage)}`;
+  const mailtoLink = `mailto:${contactPlaceholders.email}?subject=${encodeURIComponent('Enquiry for A to Z Fitness')}`;
 
   return (
     <div className="contact-page">
@@ -68,221 +17,162 @@ export default function Contact() {
       <section className="page-header-section">
         <div className="container">
           <span className="section-tag">
-            <Mail size={14} />
-            Contact & Location
+            <Sparkles size={14} />
+            Direct Communication
           </span>
-          <h1>Get In Touch With A to Z Fitness</h1>
+          <h1>Connect With A to Z Fitness</h1>
           <p className="page-header-lead">
-            Review our verified contact placeholders and frontend communication interface awaiting client activation.
+            Reach out directly to our gym team without filling out forms. Choose between a direct telephone call or an instant WhatsApp chat for immediate assistance.
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main Direct Channels Section */}
       <section className="section-padding">
         <div className="container">
-          <div className="contact-layout-grid">
-            {/* Contact Placeholders Panel */}
-            <div className="contact-info-panel">
-              <span className="section-tag">Official Details</span>
-              <h2>Gym Information</h2>
-              <p className="contact-lead-text">
-                The details below are verified placeholders. Accurate location coordinates, official hotlines, and member service hours will be populated upon client confirmation.
-              </p>
-
-              <div className="contact-cards-stack">
-                <div className="contact-detail-card card">
-                  <div className="detail-icon-wrap">
-                    <MapPin size={22} />
-                  </div>
-                  <div>
-                    <span className="detail-label">Gym Physical Address</span>
-                    <strong className="detail-value">{brandInfo.contactPlaceholders.address}</strong>
-                    <span className="placeholder-tag">Placeholder</span>
-                    <p className="detail-hint">{brandInfo.contactPlaceholders.addressNote}</p>
-                  </div>
+          {/* Direct Action Channels Grid */}
+          <div className="direct-channels-grid">
+            {/* Call Direct Channel */}
+            <div className="channel-card call-card card card-hover-glow">
+              <div className="channel-header">
+                <div className="channel-icon-wrap call-icon-wrap">
+                  <Phone size={28} />
                 </div>
-
-                <div className="contact-detail-card card">
-                  <div className="detail-icon-wrap">
-                    <Phone size={22} />
-                  </div>
-                  <div>
-                    <span className="detail-label">Telephone / Helpline</span>
-                    <strong className="detail-value">{brandInfo.contactPlaceholders.phone}</strong>
-                    <span className="placeholder-tag">Placeholder</span>
-                    <p className="detail-hint">{brandInfo.contactPlaceholders.phoneNote}</p>
-                  </div>
-                </div>
-
-                <div className="contact-detail-card card">
-                  <div className="detail-icon-wrap">
-                    <Mail size={22} />
-                  </div>
-                  <div>
-                    <span className="detail-label">Email Enquiries</span>
-                    <strong className="detail-value">{brandInfo.contactPlaceholders.email}</strong>
-                    <span className="placeholder-tag">Placeholder</span>
-                    <p className="detail-hint">{brandInfo.contactPlaceholders.emailNote}</p>
-                  </div>
-                </div>
-
-                <div className="contact-detail-card card">
-                  <div className="detail-icon-wrap">
-                    <Clock size={22} />
-                  </div>
-                  <div>
-                    <span className="detail-label">Operating Schedule</span>
-                    <strong className="detail-value">{brandInfo.contactPlaceholders.hoursWeekday}</strong>
-                    <span className="placeholder-tag">Placeholder</span>
-                    <p className="detail-hint">{brandInfo.contactPlaceholders.hoursWeekend}</p>
-                  </div>
-                </div>
+                <span className="badge badge-accent">Instant Voice Call</span>
               </div>
 
-              {/* Map Placeholder Notice */}
-              <div className="map-placeholder-box card">
-                <div className="map-placeholder-inner">
-                  <MapPin size={32} className="map-pin-pulse" />
-                  <h4>Interactive Location Map</h4>
-                  <p>Google Maps embed will be linked here once the gym's verified physical address is confirmed by the client.</p>
-                  <span className="badge badge-placeholder">Awaiting Official GPS Coordinates</span>
+              <div className="channel-body">
+                <h2 className="channel-title">Call Direct</h2>
+                <p className="channel-desc">
+                  Speak directly with an A to Z Fitness representative regarding gym schedules, equipment, and opening announcements.
+                </p>
+
+                <div className="channel-value-display">
+                  <span className="val-label">Phone Line:</span>
+                  <strong className="val-text">{contactPlaceholders.phone}</strong>
+                  <span className="placeholder-tag">Placeholder</span>
                 </div>
+
+                <a
+                  href={telLink}
+                  className="btn btn-primary btn-lg channel-action-btn"
+                  aria-label="Call A to Z Fitness directly"
+                >
+                  <Phone size={20} />
+                  <span>Call Direct Now</span>
+                  <ArrowUpRight size={18} />
+                </a>
+
+                <p className="channel-note">{contactPlaceholders.phoneNote}</p>
               </div>
             </div>
 
-            {/* Frontend Preview Enquiry Form */}
-            <div className="contact-form-panel">
-              <div className="form-wrapper-card card">
-                <div className="form-header">
-                  <span className="badge badge-neutral">Frontend Form Interface</span>
-                  <h3>Send An Enquiry</h3>
-                  <p>Test the client-side validation and enquiry routing fields.</p>
+            {/* WhatsApp Direct Channel */}
+            <div className="channel-card whatsapp-card card card-hover-glow">
+              <div className="channel-header">
+                <div className="channel-icon-wrap whatsapp-icon-wrap">
+                  <MessageCircle size={28} />
                 </div>
-
-                {/* Important Non-Transmission Disclaimer */}
-                <div className="form-disclaimer-banner">
-                  <ShieldAlert size={18} className="banner-alert-icon" />
-                  <div>
-                    <strong>Client Integration Note:</strong>
-                    <p>
-                      This website operates without a backend server or form API. Submitting this form validates input fields in your browser but will not transmit enquiries until an email delivery service (e.g. EmailJS, Formspree, or custom webhook) is connected.
-                    </p>
-                  </div>
-                </div>
-
-                {validationError && (
-                  <div className="form-error-banner" role="alert">
-                    <AlertCircle size={16} />
-                    <span>{validationError}</span>
-                  </div>
-                )}
-
-                {previewNotice && (
-                  <div className="form-preview-result animate-fade-in" role="status">
-                    <div className="preview-res-header">
-                      <CheckCircle2 size={20} color="var(--accent-primary)" />
-                      <strong>{previewNotice.title}</strong>
-                    </div>
-                    <p className="preview-res-msg">{previewNotice.message}</p>
-                    <div className="preview-summary">
-                      <span className="sum-item"><strong>Name:</strong> {previewNotice.submittedData.fullName}</span>
-                      <span className="sum-item"><strong>Email:</strong> {previewNotice.submittedData.email}</span>
-                      <span className="sum-item"><strong>Subject:</strong> {previewNotice.submittedData.interest}</span>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={handleReset}
-                      className="btn btn-outline btn-sm reset-preview-btn"
-                    >
-                      Clear & Try Again
-                    </button>
-                  </div>
-                )}
-
-                <form onSubmit={handleSubmit} className="enquiry-form">
-                  <div className="form-group">
-                    <label htmlFor="fullName" className="form-label">Full Name *</label>
-                    <input
-                      id="fullName"
-                      name="fullName"
-                      type="text"
-                      className="form-input"
-                      placeholder="e.g. Alex Morgan"
-                      value={formData.fullName}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="form-grid-2">
-                    <div className="form-group">
-                      <label htmlFor="email" className="form-label">Email Address *</label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        className="form-input"
-                        placeholder="e.g. alex@example.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="phone" className="form-label">Phone Number (Optional)</label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        className="form-input"
-                        placeholder="e.g. +1 (555) 000-0000"
-                        value={formData.phone}
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="interest" className="form-label">Area of Interest</label>
-                    <select
-                      id="interest"
-                      name="interest"
-                      className="form-select"
-                      value={formData.interest}
-                      onChange={handleChange}
-                    >
-                      <option value="General Information">General Information</option>
-                      <option value="Membership Enquiry">Membership Enquiry</option>
-                      <option value="Program: Strength Training">Program: Strength Training</option>
-                      <option value="Program: Cardio Conditioning">Program: Cardio Conditioning</option>
-                      <option value="Program: Weight Training">Program: Weight Training</option>
-                      <option value="Program: Functional Fitness">Program: Functional Fitness</option>
-                      <option value="Program: Personal Training">Program: Personal Training</option>
-                    </select>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="message" className="form-label">Message *</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="form-textarea"
-                      placeholder="Please enter your enquiry or question..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-
-                  <button type="submit" className="btn btn-primary btn-block form-submit-btn">
-                    <Send size={16} />
-                    <span>Test Form Validation</span>
-                  </button>
-                </form>
+                <span className="badge badge-whatsapp">Instant WhatsApp Chat</span>
               </div>
+
+              <div className="channel-body">
+                <h2 className="channel-title">Chat on WhatsApp</h2>
+                <p className="channel-desc">
+                  Have a quick question? Message our official WhatsApp account for fast replies on membership updates, program details, and tours.
+                </p>
+
+                <div className="channel-value-display">
+                  <span className="val-label">WhatsApp Number:</span>
+                  <strong className="val-text">{contactPlaceholders.whatsapp}</strong>
+                  <span className="placeholder-tag">Placeholder</span>
+                </div>
+
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp btn-lg channel-action-btn"
+                  aria-label="Chat with A to Z Fitness on WhatsApp"
+                >
+                  <MessageCircle size={20} />
+                  <span>Open WhatsApp Chat</span>
+                  <ArrowUpRight size={18} />
+                </a>
+
+                <p className="channel-note">{contactPlaceholders.whatsappNote}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Secondary Details: Location & Hours */}
+          <div className="secondary-details-grid">
+            {/* Physical Location Card */}
+            <div className="detail-panel card">
+              <div className="panel-title-wrap">
+                <div className="panel-icon-wrap">
+                  <MapPin size={22} />
+                </div>
+                <div>
+                  <h3 className="panel-title">Gym Location</h3>
+                  <p className="panel-subtitle">Official facility premises</p>
+                </div>
+              </div>
+
+              <div className="detail-content-box">
+                <strong className="detail-highlight">{contactPlaceholders.address}</strong>
+                <span className="placeholder-tag">Placeholder</span>
+                <p className="detail-subtext">{contactPlaceholders.addressNote}</p>
+              </div>
+
+              <div className="map-preview-box">
+                <MapPin size={28} className="map-pin-pulse" />
+                <p>Google Maps directions will be linked upon confirmation of final address coordinates.</p>
+              </div>
+            </div>
+
+            {/* Hours & Additional Channels */}
+            <div className="detail-panel card">
+              <div className="panel-title-wrap">
+                <div className="panel-icon-wrap">
+                  <Clock size={22} />
+                </div>
+                <div>
+                  <h3 className="panel-title">Operating Schedule</h3>
+                  <p className="panel-subtitle">Planned opening hours</p>
+                </div>
+              </div>
+
+              <div className="detail-content-box">
+                <strong className="detail-highlight">{contactPlaceholders.hoursWeekday}</strong>
+                <span className="placeholder-tag">Placeholder</span>
+                <p className="detail-subtext">{contactPlaceholders.hoursWeekend}</p>
+              </div>
+
+              <div className="email-fallback-box">
+                <div className="email-info-wrap">
+                  <Mail size={18} className="email-icon" />
+                  <div>
+                    <span className="email-label">Prefer Email?</span>
+                    <strong className="email-address">{contactPlaceholders.email}</strong>
+                  </div>
+                </div>
+                <a href={mailtoLink} className="btn btn-outline btn-sm">
+                  <span>Send Email</span>
+                  <ArrowUpRight size={14} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Direct Contact Transparency Notice */}
+          <div className="direct-transparency-card card">
+            <ShieldCheck size={22} className="transparency-icon" />
+            <div>
+              <h4>Why Direct Contact Only?</h4>
+              <p>
+                To provide you with the fastest and most reliable response, <strong>{brandInfo.name}</strong> connects you straight to real staff via Call or WhatsApp. We avoid unmonitored contact forms, ensuring your questions are handled promptly.
+              </p>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dumbbell, MapPin, Phone, Mail, Clock, ShieldAlert, ArrowUpRight } from 'lucide-react';
+import { Dumbbell, MapPin, Phone, MessageCircle, Mail, Clock, ShieldAlert, ArrowUpRight } from 'lucide-react';
 import { brandInfo } from '../data/gymData';
 import './Footer.css';
 
@@ -73,8 +73,25 @@ export default function Footer() {
             <div className="footer-contact-item">
               <Phone size={18} className="footer-contact-icon" />
               <div>
-                <span className="footer-contact-value">{brandInfo.contactPlaceholders.phone}</span>
-                <span className="placeholder-tag">Placeholder</span>
+                <a href={`tel:${brandInfo.contactPlaceholders.phoneRaw}`} className="footer-contact-value">
+                  {brandInfo.contactPlaceholders.phone}
+                </a>
+                <span className="placeholder-tag">Direct Call</span>
+              </div>
+            </div>
+
+            <div className="footer-contact-item">
+              <MessageCircle size={18} className="footer-contact-icon" style={{ color: '#25D366' }} />
+              <div>
+                <a
+                  href={`https://wa.me/${brandInfo.contactPlaceholders.whatsappRaw}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-contact-value"
+                >
+                  {brandInfo.contactPlaceholders.whatsapp}
+                </a>
+                <span className="placeholder-tag" style={{ color: '#25D366', background: 'rgba(37, 211, 102, 0.12)' }}>WhatsApp</span>
               </div>
             </div>
 
