@@ -1,11 +1,11 @@
-/* Hero Section */
+/* Front Look / Hero Section */
 .hero-section {
   position: relative;
-  min-height: 90vh;
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
   overflow: hidden;
 }
 
@@ -30,7 +30,7 @@
   background: linear-gradient(
     180deg,
     rgba(9, 11, 14, 0.75) 0%,
-    rgba(9, 11, 14, 0.6) 40%,
+    rgba(9, 11, 14, 0.55) 40%,
     rgba(9, 11, 14, 0.95) 85%,
     rgba(9, 11, 14, 1) 100%
   ),
@@ -44,14 +44,14 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 860px;
+  max-width: 880px;
 }
 
 .hero-pill-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.45rem 1.1rem;
+  padding: 0.45rem 1.15rem;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-full);
@@ -110,7 +110,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1.25rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .hero-feature-ribbon {
@@ -152,158 +152,7 @@
   color: var(--text-dim);
 }
 
-/* Background Utility */
-.bg-darker {
-  background-color: var(--bg-secondary);
-}
-
-/* About Preview */
-.about-preview-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.lead-text {
-  font-size: 1.15rem;
-  color: var(--text-primary);
-  line-height: 1.65;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.about-notice-box {
-  background: rgba(255, 193, 7, 0.08);
-  border: 1px dashed rgba(255, 193, 7, 0.35);
-  border-radius: var(--radius-md);
-  padding: 1rem 1.25rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-  display: flex;
-  gap: 0.85rem;
-  align-items: flex-start;
-}
-
-.about-notice-box p {
-  font-size: 0.85rem;
-  color: #ffc107;
-  line-height: 1.5;
-}
-
-.notice-icon {
-  color: #ffc107;
-  flex-shrink: 0;
-  margin-top: 0.15rem;
-}
-
-.about-preview-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.pillar-card {
-  padding: 1.5rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.pillar-number {
-  font-family: var(--font-athletic);
-  font-size: 2.2rem;
-  color: var(--accent-primary);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.pillar-card h4 {
-  font-size: 1.15rem;
-  margin-bottom: 0.4rem;
-}
-
-.pillar-card p {
-  font-size: 0.88rem;
-}
-
-/* Section Footer CTA */
-.section-footer-cta {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-/* Membership Teaser Card */
-.membership-teaser-card {
-  background: linear-gradient(135deg, rgba(20, 25, 33, 0.95) 0%, rgba(13, 17, 23, 0.95) 100%);
-  border: 1px solid var(--border-medium);
-  padding: 3.5rem 3rem;
-  text-align: center;
-}
-
-.membership-teaser-content {
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.teaser-title {
-  font-size: 2.2rem;
-  margin-top: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.teaser-subheading {
-  font-size: 1.1rem;
-  color: var(--accent-primary);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.teaser-description {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 2rem;
-}
-
-.teaser-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-/* Contact CTA Banner */
-.contact-banner {
-  background: linear-gradient(90deg, #161c24 0%, #11151c 100%);
-  border: 1px solid var(--border-medium);
-  padding: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.contact-banner-text {
-  max-width: 620px;
-}
-
-.contact-banner-text h2 {
-  font-size: 2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.contact-banner-text p {
-  font-size: 1rem;
-}
-
 @media (max-width: 1024px) {
-  .about-preview-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
   .hero-feature-ribbon {
     grid-template-columns: 1fr;
     gap: 1.25rem;
@@ -311,11 +160,12 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
-  }
-  .contact-banner {
-    padding: 2rem;
   }
 }
