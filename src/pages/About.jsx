@@ -33,7 +33,7 @@ export default function About() {
                 At <strong>{brandInfo.name}</strong>, our vision is built around intentional fitness. We recognize that athletic improvement is not a shortcut or a temporary phase—it is a methodical journey encompassing progressive strength, cardiovascular conditioning, mobility, and recovery.
               </p>
               <p>
-                Our facility is planned to provide purposeful training environments where members can train with focus, whether executing fundamental barbell lifts, developing athletic agility on the turf, or pushing aerobic endurance.
+                Our facility is planned to provide purposeful training environments where members can train with focus, whether executing fundamental barbell lifts, building core strength and mobility, or pushing cardiovascular endurance.
               </p>
               <p>
                 We do not endorse fads or unsubstantiated claims. Instead, our workout framework emphasizes proper mechanics, progressive overload, injury prevention, and consistent habit formation.

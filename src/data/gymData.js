@@ -78,13 +78,13 @@ export const proposedPrograms = [
     id: "functional-fitness",
     name: "Functional Fitness",
     category: "Functional",
-    tagline: "Athletic agility, core stability, and dynamic movement.",
-    description: "Dynamic full-body conditioning incorporating kettlebells, medicine balls, battle ropes, and turf drills to build athletic strength for daily physical performance.",
-    focusAreas: ["Core Stability", "Mobility & Agility", "Rotational Power"],
+    tagline: "Core stability, bodyweight conditioning, and mobility.",
+    description: "Dynamic full-body conditioning incorporating kettlebells, medicine balls, resistance bands, and bodyweight drills to build functional strength for daily physical performance.",
+    focusAreas: ["Core Stability", "Mobility & Balance", "Functional Strength"],
     image: functionalImg,
     isProposed: true,
-    intensity: "Moderate to High",
-    equipmentFocus: "Turf Track, Kettlebells, Battle Ropes, Plyo Boxes"
+    intensity: "All Fitness Levels",
+    equipmentFocus: "Kettlebells, Medicine Balls, Resistance Bands, Mats"
   },
   {
     id: "personal-training",
@@ -129,11 +129,11 @@ export const facilityShowcase = [
     isIllustrative: true
   },
   {
-    id: "functional-turf-area",
-    title: "Functional Turf Track",
-    subtitle: "Athletic Movement & Agility",
-    description: "High-density synthetic turf lane suitable for sled pushes, kettlebell conditioning, battle ropes, and athletic agility drills.",
-    features: ["Sled Push Sprint Turf", "Kettlebell & Sandbag Station", "Battle Ropes & Plyometric Boxes"],
+    id: "stretching-functional-zone",
+    title: "Stretching & Core Zone",
+    subtitle: "Mobility & Bodyweight Conditioning",
+    description: "Dedicated open matted space designed for post-workout stretching, core abdominal training, mobility exercises, and warm-up routines.",
+    features: ["Cushioned Stretching Mats", "Kettlebells & Resistance Bands", "Stability Balls & Foam Rollers"],
     image: functionalImg,
     isIllustrative: true
   },

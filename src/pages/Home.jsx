@@ -59,7 +59,7 @@ export default function Home() {
               <div className="ribbon-icon"><Dumbbell size={20} /></div>
               <div>
                 <strong>Complete Training</strong>
-                <span>Strength, cardio & functional turf</span>
+                <span>Strength, cardio & free weights</span>
               </div>
             </div>
 

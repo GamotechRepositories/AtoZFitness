@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="footer-brand-desc">
-              <strong style={{ color: 'var(--text-white)' }}>A to Z Fitness</strong> is a complete athletic gym engineered for progressive strength, functional conditioning, and cardiovascular health. Equipped with professional-grade resistance machines, Olympic free weights, cardio decks, and dedicated turf training zones, <strong style={{ color: 'var(--text-white)' }}>A to Z Fitness</strong> provides a clean, disciplined, and motivating atmosphere for athletes and everyday fitness enthusiasts.
+              <strong style={{ color: 'var(--text-white)' }}>A to Z Fitness</strong> is a modern gym engineered for progressive strength training, cardio fitness, and overall physical health. Equipped with professional resistance machines, free weights, dumbbells, cardio equipment, and stretching areas, <strong style={{ color: 'var(--text-white)' }}>A to Z Fitness</strong> provides a clean, welcoming, and motivating atmosphere for all fitness levels.
             </p>
             <div className="footer-feature-pill">
               <ShieldCheck size={15} />

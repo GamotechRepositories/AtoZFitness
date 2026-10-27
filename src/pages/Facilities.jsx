@@ -54,7 +54,7 @@ export default function Facilities() {
                 <CheckCircle2 size={18} color="var(--accent-primary)" />
                 <div>
                   <strong>Spacious Movement Clearance</strong>
-                  <span>Ample lifting platform spacing and safety margins between free weights and functional tracks.</span>
+                  <span>Ample lifting platform spacing and safety margins between free weights and workout stations.</span>
                 </div>
               </div>
 
@@ -62,7 +62,7 @@ export default function Facilities() {
                 <CheckCircle2 size={18} color="var(--accent-primary)" />
                 <div>
                   <strong>High-Performance Flooring</strong>
-                  <span>Shock-absorbing rubber impact tiles and sprint turf designed for heavy Olympic drops and agility drills.</span>
+                  <span>Shock-absorbing rubber impact tiles designed for safe weight drops, stability, and floor protection.</span>
                 </div>
               </div>
 
