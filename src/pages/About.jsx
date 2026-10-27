@@ -157,10 +157,9 @@ export default function About() {
                   ))}
                 </div>
 
-                {/* Top Overlay: Tag & Slide Counter */}
+                {/* Top Overlay: Facility Zone Tag */}
                 <div className="slideshow-top-bar">
                   <span className="slideshow-tag-badge">{aboutSlides[currentSlide].tag}</span>
-                  <span className="slideshow-counter-badge">{currentSlide + 1} / {aboutSlides.length}</span>
                 </div>
 
                 {/* Navigation Arrows */}

@@ -153,19 +153,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.slideshow-counter-badge {
-  background: rgba(9, 11, 14, 0.78);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--border-medium);
-  color: var(--text-white);
-  font-size: 0.76rem;
-  font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
 /* Slideshow Arrow Navigation */
 .slideshow-arrow-btn {
   position: absolute;
