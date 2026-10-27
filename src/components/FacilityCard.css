@@ -1,0 +1,115 @@
+.facility-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.facility-image-wrap {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.facility-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.facility-card:hover .facility-img {
+  transform: scale(1.05);
+}
+
+.facility-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 11, 14, 0.15) 0%, rgba(9, 11, 14, 0.85) 100%);
+}
+
+.facility-badge-strip {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.facility-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.facility-sub {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.facility-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 0.75rem;
+}
+
+.facility-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.facility-features {
+  margin-top: auto;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.features-header {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.86rem;
+  color: var(--text-primary);
+}
+
+.feature-icon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.facility-disclaimer {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-style: italic;
+}

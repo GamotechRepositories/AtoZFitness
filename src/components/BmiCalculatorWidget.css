@@ -1,0 +1,320 @@
+.bmi-widget-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2.2rem;
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-lg);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.bmi-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bmi-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bmi-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--accent-subtle);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bmi-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 0.2rem;
+}
+
+.bmi-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.bmi-inputs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bmi-input-group {
+  margin-bottom: 0;
+}
+
+.unit-label {
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.input-with-suffix {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-suffix .form-input {
+  padding-right: 3.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.input-suffix {
+  position: absolute;
+  right: 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: lowercase;
+  pointer-events: none;
+}
+
+.bmi-error-box {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.bmi-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bmi-submit-btn {
+  flex: 1;
+}
+
+.bmi-reset-btn {
+  padding: 0.85rem 1.4rem;
+}
+
+/* Calculation Result */
+.bmi-result-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.bmi-score-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.bmi-score-label {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 0.2rem;
+}
+
+.bmi-score-number {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bmi-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid currentColor;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Gauge Meter */
+.bmi-gauge-wrap {
+  margin-bottom: 1.4rem;
+}
+
+.bmi-gauge-bar {
+  position: relative;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to right, #3b82f6 0%, #3b82f6 20%, #ccff00 20%, #ccff00 55%, #f59e0b 55%, #f59e0b 75%, #ef4444 75%, #ef4444 100%);
+  overflow: visible;
+}
+
+.bmi-gauge-indicator {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bmi-gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.5rem;
+}
+
+.bmi-result-desc {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.9rem;
+  line-height: 1.5;
+}
+
+.bmi-healthy-tip {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.bmi-healthy-tip span {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* Categories Legend */
+.bmi-categories-legend {
+  margin-bottom: 1.5rem;
+}
+
+.legend-title {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.categories-pills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.cat-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-bottom: 0.2rem;
+}
+
+.cat-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cat-range {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+/* Privacy & Disclaimer */
+.bmi-privacy-note {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 0.9rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+}
+
+.bmi-disclaimer-box {
+  background: rgba(255, 193, 7, 0.05);
+  border: 1px solid rgba(255, 193, 7, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+}
+
+.disclaimer-title {
+  font-size: 0.92rem;
+  color: #ffc107;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.disclaimer-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.disclaimer-list li {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .bmi-widget-card {
+    padding: 1.5rem;
+  }
+  .bmi-inputs-row {
+    grid-template-columns: 1fr;
+  }
+  .categories-pills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

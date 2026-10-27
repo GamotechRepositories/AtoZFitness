@@ -1,0 +1,137 @@
+.program-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.program-image-wrap {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+}
+
+.program-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.program-card:hover .program-img {
+  transform: scale(1.06);
+}
+
+.program-overlay-grad {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 11, 14, 0.2) 0%, rgba(9, 11, 14, 0.85) 100%);
+}
+
+.program-top-badges {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.program-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.program-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--text-white);
+}
+
+.program-tagline {
+  font-size: 0.88rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.program-description {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.program-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.75rem 0.9rem;
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+}
+
+.program-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.meta-icon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.meta-label {
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.meta-val {
+  color: var(--text-primary);
+}
+
+.program-focus-tags {
+  margin-bottom: 1.5rem;
+}
+
+.focus-title {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.focus-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.focus-pill {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+.program-actions {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.program-cta-btn {
+  width: 100%;
+}

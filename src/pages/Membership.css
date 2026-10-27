@@ -1,0 +1,131 @@
+.membership-main-card {
+  max-width: 820px;
+  margin: 0 auto 3rem auto;
+  padding: 3.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-card) 0%, rgba(13, 17, 23, 0.95) 100%);
+  border: 1px solid var(--border-medium);
+}
+
+.status-badge-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.main-notice-title {
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.main-notice-sub {
+  font-size: 1.15rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.main-notice-body {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 660px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.membership-points-box {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.membership-points-box h4 {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-white);
+}
+
+.points-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.points-list li span {
+  line-height: 1.5;
+}
+
+.no-fake-payments-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 193, 7, 0.08);
+  border: 1px dashed rgba(255, 193, 7, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.no-fake-payments-notice strong {
+  display: block;
+  color: #ffc107;
+  font-size: 0.92rem;
+  margin-bottom: 0.25rem;
+}
+
+.no-fake-payments-notice p {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.membership-cta-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.tier-preview-framework {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+}
+
+.framework-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.framework-header h4 {
+  font-size: 1rem;
+  color: var(--text-white);
+}
+
+.tier-preview-framework p {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .membership-main-card {
+    padding: 2rem 1.5rem;
+  }
+}
