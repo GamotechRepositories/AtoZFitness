@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Dumbbell, 
@@ -14,16 +14,63 @@ import {
   Clock,
   MapPin,
   MessageCircle,
-  Phone
+  Phone,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { brandInfo, proposedPrograms } from '../data/gymData';
 import coachingImg from '../assets/images/coaching.jpg';
+import weightsImg from '../assets/images/weights.jpg';
+import cardioImg from '../assets/images/cardio.jpg';
 import './About.css';
 
 export default function About() {
   const whatsappUrl = `https://wa.me/${brandInfo.contactPlaceholders.whatsappRaw}?text=${encodeURIComponent(
     `Hi ${brandInfo.name}, I would like to enquire about membership and training facilities.`
   )}`;
+
+  // 3-Image Slideshow Configuration
+  const aboutSlides = [
+    {
+      image: coachingImg,
+      alt: `Professional Coaching & Strength Guidance at ${brandInfo.name}`,
+      tag: "Floor Coaching",
+      caption: `Professional Coaching & Strength Guidance at ${brandInfo.name}`
+    },
+    {
+      image: weightsImg,
+      alt: `Free Weights & Resistance Floor at ${brandInfo.name}`,
+      tag: "Free Weights Zone",
+      caption: `Precision Free Weights & Dumbbell Training Floor at ${brandInfo.name}`
+    },
+    {
+      image: cardioImg,
+      alt: `Cardio Conditioning & Running Arena at ${brandInfo.name}`,
+      tag: "Cardio Arena",
+      caption: `Cardio Conditioning Decks & Endurance Arena at ${brandInfo.name}`
+    }
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Stepped slideshow: pauses for ~2 seconds on each slide, then advances
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % aboutSlides.length);
+    }, 2200); // 2.2 seconds pause per slide
+
+    return () => clearInterval(interval);
+  }, [isPaused, aboutSlides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % aboutSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + aboutSlides.length) % aboutSlides.length);
+  };
 
   return (
     <div className="about-page">
@@ -86,14 +133,70 @@ export default function About() {
             </div>
 
             <div className="about-story-media">
-              <div className="about-image-card">
-                <img
-                  src={coachingImg}
-                  alt={`Athletic training and guidance at ${brandInfo.name}`}
-                  className="about-story-img"
-                />
-                <div className="about-img-caption">
-                  <span>Professional Coaching & Strength Guidance at {brandInfo.name}</span>
+              {/* Stepped Slideshow (3 images with pause and transition) */}
+              <div 
+                className="about-image-card slideshow-container"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                aria-label={`${brandInfo.name} Facility Tour Slideshow`}
+              >
+                <div className="slideshow-track">
+                  {aboutSlides.map((slide, idx) => (
+                    <div
+                      key={idx}
+                      className={`slideshow-slide ${idx === currentSlide ? 'slide-active' : ''}`}
+                      aria-hidden={idx !== currentSlide}
+                    >
+                      <img
+                        src={slide.image}
+                        alt={slide.alt}
+                        className="about-story-img"
+                        loading={idx === 0 ? "eager" : "lazy"}
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Top Overlay: Tag & Slide Counter */}
+                <div className="slideshow-top-bar">
+                  <span className="slideshow-tag-badge">{aboutSlides[currentSlide].tag}</span>
+                  <span className="slideshow-counter-badge">{currentSlide + 1} / {aboutSlides.length}</span>
+                </div>
+
+                {/* Navigation Arrows */}
+                <button 
+                  className="slideshow-arrow-btn arrow-prev" 
+                  onClick={prevSlide}
+                  aria-label="Previous slide"
+                  type="button"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button 
+                  className="slideshow-arrow-btn arrow-next" 
+                  onClick={nextSlide}
+                  aria-label="Next slide"
+                  type="button"
+                >
+                  <ChevronRight size={20} />
+                </button>
+
+                {/* Bottom Overlay: Caption & Dots */}
+                <div className="slideshow-bottom-overlay">
+                  <div className="slideshow-caption-text">
+                    {aboutSlides[currentSlide].caption}
+                  </div>
+                  <div className="slideshow-dots">
+                    {aboutSlides.map((_, idx) => (
+                      <button
+                        key={idx}
+                        className={`slideshow-dot ${idx === currentSlide ? 'dot-active' : ''}`}
+                        onClick={() => setCurrentSlide(idx)}
+                        aria-label={`Go to slide ${idx + 1}`}
+                        type="button"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 
