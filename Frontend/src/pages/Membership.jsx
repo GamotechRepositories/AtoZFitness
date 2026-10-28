@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, ShieldCheck, Phone, MessageCircle, ArrowRight, CheckCircle2, AlertCircle, FileText } from 'lucide-react';
 import { membershipPlaceholderNotice, brandInfo } from '../data/gymData';
+import membershipBg from '../assets/images/prog_muscle.jpg';
 import './Membership.css';
 
 export default function Membership() {
@@ -9,7 +10,16 @@ export default function Membership() {
     <div className="membership-page">
       {/* Page Header */}
       <section className="page-header-section">
-        <div className="container">
+        <div className="page-header-bg-container">
+          <img
+            src={membershipBg}
+            alt="Dedicated member training with free weights and resistance machines"
+            className="page-header-bg-img"
+          />
+          <div className="page-header-gradient-overlay" />
+        </div>
+
+        <div className="container page-header-content animate-fade-in">
           <span className="section-tag">
             <Clock size={14} />
             Membership Status

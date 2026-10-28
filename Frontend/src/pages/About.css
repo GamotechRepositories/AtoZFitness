@@ -1,18 +1,4 @@
-.page-header-section {
-  padding-top: 5rem;
-  padding-bottom: 4rem;
-  background: radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.06) 0%, transparent 60%);
-  border-bottom: 1px solid var(--border-subtle);
-  text-align: center;
-}
-
-.page-header-lead {
-  max-width: 720px;
-  margin: 1.25rem auto 0 auto;
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
+/* About Page Styles */
 
 .about-story-grid {
   display: grid;

@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, AlertCircle, ShieldAlert, CheckCircle2 } from 'lucide-react';
 import { facilityShowcase } from '../data/gymData';
 import FacilityCard from '../components/FacilityCard';
+import cardioImg from '../assets/images/cardio.jpg';
 import './Facilities.css';
 
 export default function Facilities() {
@@ -9,7 +10,16 @@ export default function Facilities() {
     <div className="facilities-page">
       {/* Page Header */}
       <section className="page-header-section">
-        <div className="container">
+        <div className="page-header-bg-container">
+          <img
+            src={cardioImg}
+            alt="Representative gym training facility floor and equipment layout"
+            className="page-header-bg-img"
+          />
+          <div className="page-header-gradient-overlay" />
+        </div>
+
+        <div className="container page-header-content animate-fade-in">
           <span className="section-tag">
             <Sparkles size={14} />
             Gym Environment

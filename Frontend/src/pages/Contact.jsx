@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, MessageCircle, MapPin, Mail, Clock, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { brandInfo } from '../data/gymData';
 import EnquiryForm from '../components/EnquiryForm';
+import contactBg from '../assets/images/prog_personal.jpg';
 import './Contact.css';
 
 export default function Contact() {
@@ -16,7 +17,16 @@ export default function Contact() {
     <div className="contact-page">
       {/* Page Header */}
       <section className="page-header-section">
-        <div className="container">
+        <div className="page-header-bg-container">
+          <img
+            src={contactBg}
+            alt="Coach consultation and member enquiry at A to Z Fitness"
+            className="page-header-bg-img"
+          />
+          <div className="page-header-gradient-overlay" />
+        </div>
+
+        <div className="container page-header-content animate-fade-in">
           <span className="section-tag">
             <Sparkles size={14} />
             Contact & Enquiries

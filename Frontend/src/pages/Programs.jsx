@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Dumbbell, Filter, AlertCircle, Sparkles } from 'lucide-react';
 import { proposedPrograms } from '../data/gymData';
 import ProgramCard from '../components/ProgramCard';
+import progStrengthImg from '../assets/images/prog_strength.jpg';
 import './Programs.css';
 
 export default function Programs() {
@@ -25,7 +26,16 @@ export default function Programs() {
     <div className="programs-page">
       {/* Page Header */}
       <section className="page-header-section">
-        <div className="container">
+        <div className="page-header-bg-container">
+          <img
+            src={progStrengthImg}
+            alt="Barbell strength and progressive resistance training disciplines"
+            className="page-header-bg-img"
+          />
+          <div className="page-header-gradient-overlay" />
+        </div>
+
+        <div className="container page-header-content animate-fade-in">
           <span className="section-tag">
             <Dumbbell size={14} />
             Workout Disciplines

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Activity, ShieldAlert, Heart, Scale, HelpCircle } from 'lucide-react';
 import BmiCalculatorWidget from '../components/BmiCalculatorWidget';
+import bmiBg from '../assets/images/prog_weightloss.jpg';
 import './BmiPage.css';
 
 export default function BmiPage() {
@@ -8,7 +9,16 @@ export default function BmiPage() {
     <div className="bmi-page">
       {/* Page Header */}
       <section className="page-header-section">
-        <div className="container">
+        <div className="page-header-bg-container">
+          <img
+            src={bmiBg}
+            alt="Body conditioning, screening and fitness weight management"
+            className="page-header-bg-img"
+          />
+          <div className="page-header-gradient-overlay" />
+        </div>
+
+        <div className="container page-header-content animate-fade-in">
           <span className="section-tag">
             <Activity size={14} />
             Fitness Screening Tool

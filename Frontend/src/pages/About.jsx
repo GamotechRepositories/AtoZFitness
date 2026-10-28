@@ -76,7 +76,16 @@ export default function About() {
     <div className="about-page">
       {/* Page Header */}
       <section className="page-header-section">
-        <div className="container">
+        <div className="page-header-bg-container">
+          <img
+            src={coachingImg}
+            alt="Representative athletic coaching and guidance at A to Z Fitness"
+            className="page-header-bg-img"
+          />
+          <div className="page-header-gradient-overlay" />
+        </div>
+
+        <div className="container page-header-content animate-fade-in">
           <span className="section-tag">
             <Sparkles size={14} />
             About {brandInfo.name}
