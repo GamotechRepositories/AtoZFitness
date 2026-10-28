@@ -263,17 +263,77 @@
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     gap: 1.75rem;
+    padding: 1.75rem 2rem;
   }
 }
 
 @media (max-width: 640px) {
   .hero-stats-hud {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 1.35rem 0.85rem;
+    padding: 1.25rem 1rem;
+    min-width: auto;
+  }
+  .hud-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 0;
+  }
+  .hud-icon-box {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  .hud-icon-box svg {
+    width: 20px;
+    height: 20px;
+  }
+  .hud-stat-info {
+    min-width: 0;
+  }
+  .hud-stat-value {
+    font-size: 1.85rem;
+    line-height: 1;
+    margin-bottom: 0.15rem;
+  }
+  .hud-stat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    white-space: normal;
+    word-break: break-word;
   }
   .hero-cta-row {
     flex-direction: column;
     align-items: stretch;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-stats-hud {
+    gap: 1.15rem 0.5rem;
+    padding: 1rem 0.75rem;
+  }
+  .hud-stat-item {
+    gap: 0.5rem;
+  }
+  .hud-icon-box {
+    width: 26px;
+    height: 26px;
+  }
+  .hud-icon-box svg {
+    width: 16px;
+    height: 16px;
+  }
+  .hud-stat-value {
+    font-size: 1.6rem;
+  }
+  .hud-stat-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
   }
 }
 
