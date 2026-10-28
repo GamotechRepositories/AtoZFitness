@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import BannerNotice from './components/BannerNotice';
 import Home from './pages/Home';
 import About from './pages/About';
 import Programs from './pages/Programs';
@@ -46,7 +45,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <BannerNotice />
       <Navbar />
       <main id="main-content" style={{ flex: '1 0 auto' }}>
         <Routes>
