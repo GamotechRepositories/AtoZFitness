@@ -50,10 +50,13 @@
   background: var(--bg-card);
   border: 1px solid var(--border-medium);
   color: var(--text-secondary);
-  padding: 0.5rem 1.2rem;
-  border-radius: var(--radius-full);
-  font-size: 0.88rem;
-  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-condensed);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   transition: all var(--transition-fast);
 }
 
@@ -65,9 +68,9 @@
 
 .filter-btn-active {
   background-color: var(--accent-primary) !important;
-  color: #0b0d10 !important;
+  color: #ffffff !important;
   border-color: var(--accent-primary) !important;
-  box-shadow: 0 2px 14px var(--accent-glow);
+  box-shadow: 0 4px 16px var(--accent-glow);
 }
 
 .programs-grid {

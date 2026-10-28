@@ -67,7 +67,7 @@ export default function Footer() {
               <MapPin size={18} className="footer-contact-icon" />
               <div>
                 <span className="footer-contact-value">{brandInfo.contactPlaceholders.address}</span>
-                <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'rgba(204,255,0,0.1)' }}>Verified Location</span>
+                <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'var(--accent-subtle)' }}>Verified Location</span>
               </div>
             </div>
 
@@ -102,7 +102,7 @@ export default function Footer() {
                 <a href={`mailto:${brandInfo.contactPlaceholders.email}`} className="footer-contact-value">
                   {brandInfo.contactPlaceholders.email}
                 </a>
-                <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'rgba(204,255,0,0.1)' }}>Verified Email</span>
+                <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'var(--accent-subtle)' }}>Verified Email</span>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ export default function Footer() {
               <div>
                 <span className="footer-contact-value">{brandInfo.contactPlaceholders.hoursWeekday}</span>
                 <span className="footer-contact-value">{brandInfo.contactPlaceholders.hoursWeekend}</span>
-                <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'rgba(204,255,0,0.1)' }}>Verified Hours</span>
+                <span className="placeholder-tag" style={{ color: 'var(--accent-primary)', background: 'var(--accent-subtle)' }}>Verified Hours</span>
               </div>
             </div>
           </div>

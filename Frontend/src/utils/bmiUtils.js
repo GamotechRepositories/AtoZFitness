@@ -36,7 +36,7 @@ export const calculateBMI = (heightCm, weightKg) => {
     description = "Your BMI suggests you may be below the standard recommended weight range for your height.";
   } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
     category = "Normal Weight";
-    color = "#ccff00"; // Volt Green
+    color = "#10b981"; // Emerald Green
     description = "Your BMI falls within the standard healthy weight category for adults.";
   } else if (bmiValue >= 25.0 && bmiValue <= 29.9) {
     category = "Overweight";
@@ -67,7 +67,7 @@ export const calculateBMI = (heightCm, weightKg) => {
 
 export const bmiCategories = [
   { label: "Underweight", range: "< 18.5", color: "#3b82f6" },
-  { label: "Normal Weight", range: "18.5 – 24.9", color: "#ccff00" },
+  { label: "Normal Weight", range: "18.5 – 24.9", color: "#10b981" },
   { label: "Overweight", range: "25.0 – 29.9", color: "#f59e0b" },
   { label: "Obese", range: "≥ 30.0", color: "#ef4444" }
 ];

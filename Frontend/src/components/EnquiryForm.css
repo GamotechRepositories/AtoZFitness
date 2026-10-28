@@ -213,7 +213,7 @@
 }
 
 .method-pill-active {
-  background: rgba(204, 255, 0, 0.1) !important;
+  background: var(--accent-subtle) !important;
   border-color: var(--accent-primary) !important;
   color: var(--accent-primary) !important;
   box-shadow: 0 0 14px var(--accent-glow);

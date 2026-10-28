@@ -9,7 +9,7 @@ export default function BannerNotice() {
 
   return (
     <aside className="preview-notice-bar" aria-label="Client Notice">
-      <Info size={16} color="#ffc107" />
+      <Info size={16} color="var(--accent-primary)" />
       <span>
         <strong>{brandInfo.name} Preview:</strong> {brandInfo.previewNotice}
       </span>

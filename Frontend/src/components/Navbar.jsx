@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Dumbbell, ArrowRight } from 'lucide-react';
+import { Menu, X, Dumbbell } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {

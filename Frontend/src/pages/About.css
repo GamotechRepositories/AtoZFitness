@@ -23,9 +23,9 @@
 .about-commitment-card {
   padding: 1.5rem;
   border: 1px solid var(--border-accent);
-  background: rgba(204, 255, 0, 0.03);
+  background: var(--accent-subtle);
   margin-top: 2rem;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
 }
 
 .commitment-header {
@@ -307,8 +307,8 @@
 .standard-icon {
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-md);
-  background: rgba(204, 255, 0, 0.08);
+  border-radius: var(--radius-xs);
+  background: var(--accent-subtle);
   border: 1px solid var(--border-accent);
   color: var(--accent-primary);
   display: flex;
@@ -373,7 +373,7 @@
   width: 68px;
   height: 68px;
   border-radius: var(--radius-full);
-  background: rgba(204, 255, 0, 0.1);
+  background: var(--accent-subtle);
   border: 1px solid var(--border-accent);
   color: var(--accent-primary);
   display: flex;

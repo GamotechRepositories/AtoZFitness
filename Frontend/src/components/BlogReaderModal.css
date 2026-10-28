@@ -114,9 +114,9 @@
 }
 
 .modal-takeaways-card {
-  background: rgba(204, 255, 0, 0.04);
-  border: 1px solid rgba(204, 255, 0, 0.2);
-  border-radius: var(--radius-md);
+  background: var(--accent-subtle);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
   padding: 1.5rem;
   margin-bottom: 2rem;
 }

@@ -27,22 +27,26 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(204, 255, 0, 0.08);
-  border: 1px solid rgba(204, 255, 0, 0.28);
+  background: var(--accent-subtle);
+  border: 1px solid var(--border-accent);
   color: var(--accent-primary);
   padding: 0.45rem 0.85rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  border-radius: var(--radius-sm);
-  letter-spacing: 0.02em;
+  font-family: var(--font-condensed);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
 }
 
 .footer-heading {
-  font-size: 1.05rem;
+  font-family: var(--font-condensed);
+  font-size: 1.15rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--text-white);
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
 }
 
 .footer-subtext {

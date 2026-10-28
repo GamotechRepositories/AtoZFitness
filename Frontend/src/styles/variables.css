@@ -1,51 +1,56 @@
 :root {
-  /* Color System */
-  --bg-primary: #090b0e;
-  --bg-secondary: #11141a;
-  --bg-tertiary: #171c24;
-  --bg-card: rgba(20, 25, 33, 0.85);
-  --bg-card-hover: rgba(26, 33, 44, 0.95);
-  --bg-glass: rgba(11, 14, 19, 0.8);
-  --bg-input: #151a22;
+  /* Color System - Dark Gritty Athletic Theme (Pinterest Reference) */
+  --bg-primary: #060708;
+  --bg-secondary: #0d0e11;
+  --bg-tertiary: #131418;
+  --bg-card: rgba(16, 17, 21, 0.94);
+  --bg-card-hover: rgba(22, 24, 30, 0.98);
+  --bg-glass: rgba(8, 9, 11, 0.88);
+  --bg-input: #111216;
   
-  /* Athletic Accents */
-  --accent-primary: #ccff00;
-  --accent-primary-hover: #b8e600;
-  --accent-glow: rgba(204, 255, 0, 0.28);
-  --accent-subtle: rgba(204, 255, 0, 0.1);
+  /* Athletic Accents - Intense Crimson Red */
+  --accent-primary: #e51b24;
+  --accent-primary-hover: #ff2d37;
+  --accent-primary-dark: #b8121a;
+  --accent-glow: rgba(229, 27, 36, 0.38);
+  --accent-glow-strong: rgba(229, 27, 36, 0.6);
+  --accent-subtle: rgba(229, 27, 36, 0.12);
+  --accent-badge-bg: #e51b24;
   --accent-orange: #ff5722;
-  --accent-blue: #00d2ff;
+  --accent-blue: #3b82f6;
 
   /* Typography Colors */
   --text-white: #ffffff;
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
-  --text-dim: #6b7280;
-  --text-placeholder: #525965;
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-dim: #71717a;
+  --text-placeholder: #52525b;
 
   /* Borders & Lines */
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-medium: rgba(255, 255, 255, 0.16);
   --border-strong: rgba(255, 255, 255, 0.28);
-  --border-accent: rgba(204, 255, 0, 0.45);
+  --border-accent: rgba(229, 27, 36, 0.5);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 10px 24px -5px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.7);
-  --shadow-glow: 0 0 28px rgba(204, 255, 0, 0.22);
-  --shadow-glow-strong: 0 0 40px rgba(204, 255, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 10px 24px -5px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.85);
+  --shadow-glow: 0 0 28px rgba(229, 27, 36, 0.3);
+  --shadow-glow-strong: 0 0 44px rgba(229, 27, 36, 0.55);
 
-  /* Font Families */
+  /* Font Families - Condensed Athletic High-Impact Display */
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Syne', sans-serif;
-  --font-athletic: 'Teko', sans-serif;
+  --font-heading: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+  --font-condensed: 'Barlow Condensed', 'Bebas Neue', sans-serif;
+  --font-athletic: 'Bebas Neue', 'Teko', 'Barlow Condensed', sans-serif;
 
-  /* Radii */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  /* Radii - Clean Modern Precision */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
   --radius-full: 9999px;
 
   /* Layout */
@@ -57,3 +62,4 @@
   --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
