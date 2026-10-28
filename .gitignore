@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+Frontend/node_modules/
+
+# Production builds
+dist/
+Frontend/dist/
+
+# Temporary / Scratch
+scratch/
+*.log
+
+# Environment variables
+.env
+.env.local
+Frontend/.env
+Frontend/.env.local
+!Frontend/.env.example
+
+# System files
+.DS_Store
+Thumbs.db
