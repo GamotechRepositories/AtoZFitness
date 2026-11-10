@@ -69,6 +69,7 @@ coverage/
 .nyc_output/
 playwright-report/
 test-results/
+AtoZFitness/
 
 # Python (in case of backend/scripts)
 __pycache__/
